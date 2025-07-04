@@ -7,10 +7,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          {/* <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg"></div>
             <span className="text-xl font-bold text-gray-900">MyApp</span>
-          </Link>
+          </Link> */}
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
@@ -35,7 +35,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="flex items-center space-x-4">
+          {/* <div className="flex items-center space-x-4">
             <Link
               to="/login"
               className="text-gray-700 hover:text-blue-600 font-medium"
@@ -48,7 +48,7 @@ export default function Navigation() {
             >
               Sign Up
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden">

@@ -21,7 +21,7 @@ export default function Index() {
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Hi, I'm <span className="text-blue-600">Paul Fischer</span>
+            Hi, I'm <span className="text-blue-600"><a href="/about">Paul Fischer</a></span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             A passionate developer creating amazing web experiences.
