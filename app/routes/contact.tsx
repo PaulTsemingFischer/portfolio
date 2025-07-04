@@ -4,7 +4,7 @@ import { json } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Contact - Your Name" },
+    { title: "Contact - Paul Fischer" },
     { name: "description", content: "Get in touch with me for opportunities and collaborations." },
   ];
 };
@@ -30,8 +30,8 @@ export default function Contact() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Get In Touch</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           I'm always interested in hearing about new opportunities and interesting projects.
           Feel free to reach out!
         </p>
@@ -40,17 +40,17 @@ export default function Contact() {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
         <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send a Message</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Send a Message</h2>
 
           {actionData?.success && (
-            <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded mb-6">
+            <div className="bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 text-green-700 dark:text-green-300 px-4 py-3 rounded mb-6">
               {actionData.message}
             </div>
           )}
 
           <Form method="post" className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Name
               </label>
               <input
@@ -58,12 +58,12 @@ export default function Contact() {
                 id="name"
                 name="name"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Email
               </label>
               <input
@@ -71,12 +71,12 @@ export default function Contact() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Message
               </label>
               <textarea
@@ -84,7 +84,7 @@ export default function Contact() {
                 name="message"
                 rows={5}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -100,36 +100,36 @@ export default function Contact() {
 
         {/* Contact Information */}
         <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Contact Information</h2>
 
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="text-blue-600 text-xl">📧</div>
               <div>
-                <h3 className="font-medium text-gray-900">Email</h3>
-                <p className="text-gray-600">your.email@example.com</p>
+                <h3 className="font-medium text-gray-900 dark:text-gray-100">Email</h3>
+                <p className="text-gray-600 dark:text-gray-300">paultsemingfischer@gmail.com</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="text-blue-600 text-xl">📍</div>
               <div>
-                <h3 className="font-medium text-gray-900">Location</h3>
-                <p className="text-gray-600">Your City, State</p>
+                <h3 className="font-medium text-gray-900 dark:text-gray-100">Location</h3>
+                <p className="text-gray-600 dark:text-gray-300">Clear Water Bay, Hong Kong</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="text-blue-600 text-xl">💼</div>
               <div>
-                <h3 className="font-medium text-gray-900">LinkedIn</h3>
+                <h3 className="font-medium text-gray-900 dark:text-gray-100">LinkedIn</h3>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://linkedin.com/in/paul-fischer-a68890278"
                   className="text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  linkedin.com/in/yourprofile
+                  linkedin.com/in/paul-fischer-a68890278
                 </a>
               </div>
             </div>
@@ -137,14 +137,14 @@ export default function Contact() {
             <div className="flex items-start space-x-4">
               <div className="text-blue-600 text-xl">🐙</div>
               <div>
-                <h3 className="font-medium text-gray-900">GitHub</h3>
+                <h3 className="font-medium text-gray-900 dark:text-gray-100">GitHub</h3>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/PaulTsemingFischer"
                   className="text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  github.com/yourusername
+                  github.com/PaulTsemingFischer
                 </a>
               </div>
             </div>

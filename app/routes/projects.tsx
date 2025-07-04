@@ -3,7 +3,7 @@ import ProjectCard from "~/components/ProjectCard";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Projects - Your Name" },
+    { title: "Projects - Paul Fischer" },
     { name: "description", content: "Check out my latest projects and work." },
   ];
 };
@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">My Projects</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Here are some of the projects I've worked on. Each one represents a learning
           journey and showcases different skills and technologies.
@@ -30,27 +30,22 @@ export default function Projects() {
 
 const projects = [
   {
-    title: "E-commerce Website",
-    description: "A full-stack e-commerce solution with user authentication, shopping cart, and payment integration.",
-    image: "/images/project1.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project1"
+    title: "Comtech Internship - 911 Call Routing Utility",
+    image: "images/comtech-logo.jpg",
+    description: "A command-line Python utility for custom interfacing with backend SQL servers used for 911 call-routing systems.",
+    technologies: ["Python", "SQL"],
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team collaboration features.",
-    image: "/images/project2.jpg",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project2"
+    title: "Graph Algorithms and Visualization",
+    description: "An interactive interface for graphs including algorithms such as Dijkstra's, Karger's, and a physics simulation for the vertex interface.",
+    image: "images/graphs-demo2.png",
+    technologies: ["Kotlin", "JavaFX"],
+    githubUrl: "https://github.com/FischerAbruzese/Graphs-Algorithms-Visualization"
   },
   {
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard that displays current conditions and forecasts for multiple cities.",
-    image: "/images/project3.jpg",
-    technologies: ["HTML", "CSS", "JavaScript", "Weather API"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project3"
+    title: "Critter Simulation",
+    description: "A parser and pretty-printer for a small custom Turing-complete language to simulate an interactive, real-time updating world of critters.",
+    image: "images/critter-world-demo.png",
+    technologies: ["Java", "JavaFX"],
   }
 ];
