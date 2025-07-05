@@ -13,7 +13,9 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
+        'equalize': ['Equalize', 'sans-serif'],
+        'optima': ['Optima', 'sans-serif'],
       },
     },
   },

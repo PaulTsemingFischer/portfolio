@@ -32,19 +32,19 @@ const projects = [
   {
     title: "Comtech Internship - 911 Call Routing Utility",
     image: "images/comtech-logo.jpg",
-    description: "A command-line Python utility for custom interfacing with backend SQL servers used for 911 call-routing systems.",
+    description: "Created a command-line Python utility for creating and inserting custom call-routing policies into backend SQL servers used for Massachusetts 911 systems.",
     technologies: ["Python", "SQL"],
   },
   {
     title: "Graph Algorithms and Visualization",
-    description: "An interactive interface for graphs including algorithms such as Dijkstra's, Karger's, and a physics simulation for the vertex interface.",
+    description: "Designed and built an interactive interface for graph visualization including algorithms such as Dijkstra's, Karger's, and a physics simulation for the vertex interface.",
     image: "images/graphs-demo2.png",
-    technologies: ["Kotlin", "JavaFX"],
+    technologies: ["Kotlin", "JavaFX", "SceneBuilder"],
     githubUrl: "https://github.com/FischerAbruzese/Graphs-Algorithms-Visualization"
   },
   {
     title: "Critter Simulation",
-    description: "A parser and pretty-printer for a small custom Turing-complete language to simulate an interactive, real-time updating world of critters.",
+    description: "Implemented a parser and pretty-printer for a custom Turing-complete language to simulate an interactive, real-time updating world of mutating critters.",
     image: "images/critter-world-demo.png",
     technologies: ["Java", "JavaFX"],
   }

@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div>
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -21,11 +21,10 @@ export default function Index() {
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Hi, I'm <span className="text-blue-600"><a href="/about">Paul Fischer</a></span>
+            Hi, I&apos;m <span className="text-blue-600"><a href="/about">Paul Fischer</a></span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            A passionate developer creating amazing web experiences.
-            Welcome to my digital space where I share my work and ideas.
+            I&apos;m a second year undergraduate Computer Science student at Cornell University. Welcome to my digital space where I share my work and ideas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -45,7 +44,7 @@ export default function Index() {
       </section>
 
       {/* Quick Skills Preview */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">What I Do</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -64,7 +63,7 @@ export default function Index() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
