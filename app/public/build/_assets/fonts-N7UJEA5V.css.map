@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/styles/fonts.css"],
+  "sourcesContent": ["@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');\r\n\r\nbody {\r\n  font-family: 'Poppins', sans-serif;\r\n  font-weight: 200;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Equalize';\r\n  src: url('/fonts/equalize/Equalize.ttf') format('truetype');\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Optima';\r\n  src: url('/fonts/optima/OPTIMA.TTF') format('truetype');\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Optima';\r\n  src: url('/fonts/optima/OPTIMA_B.TTF') format('truetype');\r\n  font-weight: bold;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Optima';\r\n  src: url('/fonts/optima/Optima_Medium.ttf') format('truetype');\r\n  font-weight: 500;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Optima';\r\n  src: url('/fonts/optima/Optima_Italic.ttf') format('truetype');\r\n  font-weight: normal;\r\n  font-style: italic;\r\n  font-display: swap;\r\n}"],
+  "mappings": ";;;AAEA;AACE;AACA;;AAGF;AACE;AACA;AACA;AACA;AACA;;AAGF;AACE;AACA;AACA;AACA;AACA;;AAGF;AACE;AACA;AACA;AACA;AACA;;AAGF;AACE;AACA;AACA;AACA;AACA;;AAGF;AACE;AACA;AACA;AACA;AACA;;",
+  "names": []
+}

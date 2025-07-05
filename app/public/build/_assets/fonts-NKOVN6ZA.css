@@ -1,0 +1,43 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap";
+
+/* app/styles/fonts.css */
+body {
+  font-family: Poppins, sans-serif;
+  font-weight: 200;
+}
+@font-face {
+  font-family: Equalize;
+  src: url(/fonts/equalize/Equalize.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Optima;
+  src: url(/fonts/optima/OPTIMA.TTF) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Optima;
+  src: url(/fonts/optima/OPTIMA_B.TTF) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Optima;
+  src: url(/fonts/optima/Optima_Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Optima;
+  src: url(/fonts/optima/Optima_Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/*# sourceMappingURL=/build/_assets/fonts-N7UJEA5V.css.map */

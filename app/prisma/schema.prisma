@@ -1,0 +1,172 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String
+  title       String?
+  bio         String?
+  location    String?
+  website     String?
+  github      String?
+  linkedin    String?
+  twitter     String?
+  avatar      String?
+  isPublic    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  projects    Project[]
+  experiences Experience[]
+  education   Education[]
+  skills      UserSkill[]
+
+  @@map("users")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  longDescription String?
+  imageUrl    String?
+  demoUrl     String?
+  sourceUrl   String?
+  status      ProjectStatus @default(IN_PROGRESS)
+  featured    Boolean  @default(false)
+  startDate   DateTime
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  technologies ProjectTechnology[]
+
+  @@map("projects")
+}
+
+model Experience {
+  id          String   @id @default(cuid())
+  company     String
+  position    String
+  description String
+  location    String?
+  website     String?
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("experiences")
+}
+
+model Education {
+  id          String   @id @default(cuid())
+  institution String
+  degree      String
+  field       String?
+  description String?
+  location    String?
+  website     String?
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean  @default(false)
+  gpa         Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("education")
+}
+
+model Technology {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  category    TechCategory
+  icon        String?
+  color       String?
+  website     String?
+  createdAt   DateTime @default(now())
+
+  // Relations
+  projects    ProjectTechnology[]
+  userSkills  UserSkill[]
+
+  @@map("technologies")
+}
+
+model UserSkill {
+  id           String      @id @default(cuid())
+  proficiency  Proficiency @default(BEGINNER)
+  yearsOfExp   Int?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  // Relations
+  userId       String
+  technologyId String
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  technology   Technology  @relation(fields: [technologyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, technologyId])
+  @@map("user_skills")
+}
+
+model ProjectTechnology {
+  id           String @id @default(cuid())
+
+  // Relations
+  projectId    String
+  technologyId String
+  project      Project    @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  technology   Technology @relation(fields: [technologyId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, technologyId])
+  @@map("project_technologies")
+}
+
+enum ProjectStatus {
+  PLANNING
+  IN_PROGRESS
+  COMPLETED
+  ON_HOLD
+  CANCELLED
+}
+
+enum TechCategory {
+  FRONTEND
+  BACKEND
+  DATABASE
+  DEVOPS
+  MOBILE
+  DESIGN
+  OTHER
+}
+
+enum Proficiency {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
