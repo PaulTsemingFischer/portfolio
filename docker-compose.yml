@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  database:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: portfolio
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: portfolio_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Main Application
+  app:
+    build: .
+    ports:
+      - "3000:5173"
+    environment:
+      DATABASE_URL: postgresql://portfolio:password@database:5432/portfolio_db
+      NODE_ENV: development
+    depends_on:
+      - database
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev -- --host  # Add this line
+volumes:
+  postgres_data:
