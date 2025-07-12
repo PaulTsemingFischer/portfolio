@@ -28,11 +28,11 @@ export default function App() {
       </head>
       <body className="h-full bg-gray-50 text-gray-900">
         <div className="min-h-full flex flex-col">
-          {/* <Header /> */}
+          <Header />
           <main className="flex-grow bg-gradient-to-br from-blue-50 to-red-50">
             <Outlet />
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
         <ScrollRestoration />
         <Scripts />

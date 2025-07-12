@@ -24,7 +24,13 @@ export default function Navigation() {
               to="/about"
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
-              About
+              About Me
+            </Link>
+            <Link
+              to="/about-you"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+            >
+              About You
             </Link>
             <Link
               to="/projects"
