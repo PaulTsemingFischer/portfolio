@@ -146,6 +146,16 @@ model ProjectTechnology {
   @@map("project_technologies")
 }
 
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+  
+  @@map("contacts")
+}
+
 enum ProjectStatus {
   PLANNING
   IN_PROGRESS

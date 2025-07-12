@@ -1,6 +1,9 @@
 import type { ActionFunction, MetaFunction } from "@remix-run/node";
 import { Form, useActionData, useNavigation } from "@remix-run/react";
 import { json } from "@remix-run/node";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,11 +18,35 @@ export const action: ActionFunction = async ({ request }) => {
   const email = formData.get("email");
   const message = formData.get("message");
 
-  // Add your form submission logic here
-  // For now, we'll just return a success message
-  console.log({ name, email, message });
+  // Validate required fields
+  if (!name || !email || !message) {
+    return json({ 
+      success: false, 
+      error: "All fields are required" 
+    }, { status: 400 });
+  }
 
-  return json({ success: true, message: "Thank you for your message! I'll get back to you soon." });
+  try {
+    // Save to database
+    await prisma.contact.create({
+      data: {
+        name: name.toString(),
+        email: email.toString(),
+        message: message.toString(),
+      },
+    });
+
+    return json({ 
+      success: true, 
+      message: "Thank you for your message! I'll get back to you soon." 
+    });
+  } catch (error) {
+    console.error("Error saving contact:", error);
+    return json({ 
+      success: false, 
+      error: "Something went wrong. Please try again." 
+    }, { status: 500 });
+  }
 };
 
 export default function Contact() {
@@ -45,6 +72,12 @@ export default function Contact() {
           {actionData?.success && (
             <div className="bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 text-green-700 dark:text-green-300 px-4 py-3 rounded mb-6">
               {actionData.message}
+            </div>
+          )}
+
+          {actionData?.error && (
+            <div className="bg-red-50 dark:bg-red-900 border border-red-200 dark:border-red-700 text-red-700 dark:text-red-300 px-4 py-3 rounded mb-6">
+              {actionData.error}
             </div>
           )}
 
