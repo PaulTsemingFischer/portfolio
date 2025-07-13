@@ -38,7 +38,7 @@ export const action: ActionFunction = async ({ request }) => {
 
     return json({ 
       success: true, 
-      message: "Thank you for your message! I'll get back to you soon." 
+      message: "Thank you for your message! I'll get back to you soon. Check out the About You page to see all sent messages!" 
     });
   } catch (error) {
     console.error("Error saving contact:", error);
@@ -60,7 +60,7 @@ export default function Contact() {
         <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Get In Touch</h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           I'm always interested in hearing about new opportunities and interesting projects.
-          Feel free to reach out!
+          Feel free to reach out! Sent messages can be found on the About You page.
         </p>
       </div>
 

@@ -132,7 +132,7 @@ export default function About() {
           <div>
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                Contact Messages ({contacts.length})
+                Messages ({contacts.length})
               </h3>
               
               {contacts.length === 0 ? (
