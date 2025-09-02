@@ -14,7 +14,7 @@ export default function Footer() {
               Email
             </a>
             <a
-              href="https://linkedin.com/in/paul-fischer-a68890278"
+              href="https://www.linkedin.com/in/paultfischer/"
               className="text-gray-400 hover:text-gray-600 transition-colors"
               target="_blank"
               rel="noopener noreferrer"

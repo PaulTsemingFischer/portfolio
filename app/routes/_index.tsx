@@ -24,7 +24,7 @@ export default function Index() {
             Hi, I&apos;m <span className="text-blue-600"><a href="/about">Paul Fischer</a></span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            I&apos;m a second year undergraduate Computer Science student at Cornell University. Welcome to my digital space where I share my work and ideas.
+            I&apos;m a undergraduate Computer Science student at Cornell University graduating May 2027.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

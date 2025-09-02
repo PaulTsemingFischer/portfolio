@@ -28,7 +28,7 @@ export default function About() {
             </p>
 
             <p className="text-gray-600 text-lg">
-              When I&apos;m not coding, you can find me practicing diabolo or exploring Hong Kong. I believe
+              When I&apos;m not coding, you can find me practicing diabolo with my performance group or exploring Ithaca. I believe
               in continuous learning and am always looking for new ways to improve my craft.
             </p>
 
@@ -38,7 +38,7 @@ export default function About() {
                 <li>📍 Based in Massachusetts, USA</li>
                 <li>🎓 Cornell University, &apos;27</li>
                 {/* <li>💼 Student</li> */}
-                <li>🌱 Currently studying abroad at HKUST</li>
+                {/* <li>🌱 Currently studying abroad at HKUST</li> */}
               </ul>
             </div>
           </div>
