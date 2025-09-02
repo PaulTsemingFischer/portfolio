@@ -22,6 +22,27 @@ export const action: ActionFunction = async ({ request }) => {
   return json({ success: true, message: "Thank you for your message! I'll get back to you soon." });
 };
 
+const submitContactForm = async (formData: {
+  name: string;
+  email: string;
+  message: string;
+}) => {
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || 'Failed to send message');
+  }
+
+  return await response.json();
+};
+
 export default function Contact() {
   const actionData = useActionData<typeof action>();
   const navigation = useNavigation();
@@ -39,7 +60,7 @@ export default function Contact() {
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Send a Message</h2>
 
           {actionData?.success && (
@@ -61,7 +82,6 @@ export default function Contact() {
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Email
@@ -74,7 +94,6 @@ export default function Contact() {
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
                 Message
@@ -87,15 +106,43 @@ export default function Contact() {
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
             <button
               type="submit"
               disabled={isSubmitting}
               className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
+              onClick={async (e) => {
+                e.preventDefault();
+
+                // Get the form element from the button's parent form
+                const form = e.currentTarget.closest('form') as HTMLFormElement;
+
+                if (!form) {
+                  alert("Form not found");
+                  return;
+                }
+
+                const formData = new FormData(form);
+
+                try {
+                  await submitContactForm({
+                    name: formData.get("name") as string,
+                    email: formData.get("email") as string,
+                    message: formData.get("message") as string,
+                  });
+                  alert("Email sent successfully!");
+                  form.reset(); // Reset the form after successful submission
+                } catch (error) {
+                  alert("Failed to send email. Please try again.");
+                  console.error(error);
+                }
+              }}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </Form>
+        </div> */}
+        <div>
+          <img src="/images/cuair-portrait.jpg" alt="Paul Fischer" className="w-full" />
         </div>
 
         {/* Contact Information */}
@@ -115,7 +162,7 @@ export default function Contact() {
               <div className="text-blue-600 text-xl">📍</div>
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">Location</h3>
-                <p className="text-gray-600 dark:text-gray-300">Clear Water Bay, Hong Kong</p>
+                <p className="text-gray-600 dark:text-gray-300">Massachusetts, USA</p>
               </div>
             </div>
 
@@ -124,12 +171,12 @@ export default function Contact() {
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">LinkedIn</h3>
                 <a
-                  href="https://linkedin.com/in/paul-fischer-a68890278"
+                  href="https://www.linkedin.com/in/paultfischer/"
                   className="text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  linkedin.com/in/paul-fischer-a68890278
+                  linkedin.com/in/paultfischer/
                 </a>
               </div>
             </div>
