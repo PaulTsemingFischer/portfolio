@@ -16,22 +16,34 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <Link
               to="/"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               About
             </Link>
             <Link
+              to="/projects"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/contact"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+            >
+              Contact
+            </Link>
+            {/* <Link
               to="/blog"
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Blog
-            </Link>
+            </Link> */}
           </div>
 
           {/* CTA Button */}

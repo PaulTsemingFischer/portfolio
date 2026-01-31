@@ -39,7 +39,7 @@ export default function Contact() {
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Send a Message</h2>
 
           {actionData?.success && (
@@ -96,6 +96,9 @@ export default function Contact() {
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </Form>
+        </div> */}
+        <div>
+          <img src="/images/cuair-portrait.jpg" alt="Paul Fischer" className="w-full" />
         </div>
 
         {/* Contact Information */}
