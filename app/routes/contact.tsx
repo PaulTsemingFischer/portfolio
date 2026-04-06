@@ -39,7 +39,7 @@ export default function Contact() {
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Send a Message</h2>
 
           {actionData?.success && (
@@ -96,6 +96,9 @@ export default function Contact() {
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </Form>
+        </div> */}
+        <div>
+          <img src="/images/cuair-portrait.jpg" alt="Paul Fischer" className="w-full" />
         </div>
 
         {/* Contact Information */}
@@ -115,7 +118,7 @@ export default function Contact() {
               <div className="text-blue-600 text-xl">📍</div>
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">Location</h3>
-                <p className="text-gray-600 dark:text-gray-300">Clear Water Bay, Hong Kong</p>
+                <p className="text-gray-600 dark:text-gray-300">Ithaca, New York</p>
               </div>
             </div>
 
@@ -124,12 +127,12 @@ export default function Contact() {
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">LinkedIn</h3>
                 <a
-                  href="https://linkedin.com/in/paul-fischer-a68890278"
+                  href="https://www.linkedin.com/in/paultfischer/"
                   className="text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  linkedin.com/in/paul-fischer-a68890278
+                  linkedin.com/in/paultfischer/
                 </a>
               </div>
             </div>

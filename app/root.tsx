@@ -8,11 +8,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "~/styles/tailwind.css?url";
+import fontsStylesheet from "~/styles/fonts.css?url";
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  { rel: "stylesheet", href: fontsStylesheet },
 ];
 
 export default function App() {
@@ -27,7 +29,7 @@ export default function App() {
       <body className="h-full bg-gray-50 text-gray-900">
         <div className="min-h-full flex flex-col">
           <Header />
-          <main className="flex-grow">
+          <main className="flex-grow bg-gradient-to-br from-blue-50 to-red-50">
             <Outlet />
           </main>
           <Footer />
