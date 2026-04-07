@@ -11,6 +11,7 @@ import stylesheet from "~/styles/tailwind.css?url";
 import fontsStylesheet from "~/styles/fonts.css?url";
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
+import { Analytics } from '@vercel/analytics/remix';
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -27,6 +28,7 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full bg-gray-50 text-gray-900">
+        <Analytics />
         <div className="min-h-full flex flex-col">
           <Header />
           <main className="flex-grow bg-gradient-to-br from-blue-50 to-red-50">
