@@ -1,5 +1,7 @@
 {
-    "name": "portfolio-worker",
-    "compatibility_date": "2026-04-07",
-    "main": "src/index.ts"
+  "name": "portfolio",
+  "compatibility_date": "2026-04-06",
+  "assets": {
+    "directory": "./build/client"
   }
+}
