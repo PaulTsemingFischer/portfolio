@@ -1,0 +1,5 @@
+{
+    "name": "portfolio-worker",
+    "compatibility_date": "2026-04-07",
+    "main": "src/index.ts"
+  }
