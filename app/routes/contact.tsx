@@ -118,7 +118,7 @@ export default function Contact() {
               <div className="text-blue-600 text-xl">📍</div>
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">Location</h3>
-                <p className="text-gray-600 dark:text-gray-300">Ithaca, New York</p>
+                <p className="text-gray-600 dark:text-gray-300">Clear Water Bay, Hong Kong</p>
               </div>
             </div>
 
@@ -127,12 +127,12 @@ export default function Contact() {
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">LinkedIn</h3>
                 <a
-                  href="https://www.linkedin.com/in/paultfischer/"
+                  href="https://linkedin.com/in/paul-fischer-a68890278"
                   className="text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  linkedin.com/in/paultfischer/
+                  linkedin.com/in/paul-fischer-a68890278
                 </a>
               </div>
             </div>
