@@ -1,5 +1,9 @@
 {
-    "name": "portfolio-worker",
-    "compatibility_date": "2026-04-07",
-    "main": "src/index.ts"
+    "name": "portfolio",
+    "compatibility_date": "2026-04-06",
+    "compatibility_flags": ["nodejs_compat"],
+    "main": "./build/server/index.js",
+    "assets": {
+      "directory": "./build/client"
+    }
   }
