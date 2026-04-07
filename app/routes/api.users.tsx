@@ -29,3 +29,7 @@ async function createUser(data: any) {
   // Database insertion
   return { id: 3, ...data };
 }
+
+export default function ApiUsers() {
+  return null;
+}
